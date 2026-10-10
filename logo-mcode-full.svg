@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="160" viewBox="0 0 600 160" fill="none" role="img" aria-labelledby="title">
+  <title id="title">M-Code Systems</title>
+  <g transform="translate(8 16) scale(2)">
+    <path fill="#2563eb" d="M8 56V8h9l15 21L47 8h9v48H45V27L32 45 19 27v29H8Z"/>
+  </g>
+  <text x="160" y="91" fill="#fff" font-family="Space Grotesk, sans-serif" font-size="58" font-weight="600">M-Code</text>
+  <text x="164" y="128" fill="#2563eb" font-family="Inter, sans-serif" font-size="22" font-weight="700" letter-spacing="5">SYSTEMS</text>
+</svg>
