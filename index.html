@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StockAR — Sistema de gestión para comercios · M-Code Systems</title>
+<meta name="description" content="StockAR ordena tu stock, tus ventas, tu caja y hasta tu taller. Funciona sin internet, instalación local, soporte en español. Hecho en Catamarca, Argentina.">
+<meta name="theme-color" content="#0b1120">
+
+<!-- Open Graph -->
+<meta property="og:title" content="StockAR — Sistema de gestión para comercios">
+<meta property="og:description" content="Stock, ventas, caja y servicio técnico en un solo sistema. Funciona sin internet.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============================================================
+     1. NAVBAR
+============================================================ -->
+<header class="navbar" id="navbar">
+  <div class="container navbar__inner">
+    <a href="#top" class="logo" aria-label="M-Code Systems — StockAR">
+      <img src="assets/logo-mcode.svg" alt="" class="logo__img" width="32" height="32">
+      <span class="logo__product">StockAR</span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Navegación principal">
+      <ul class="nav__list">
+        <li class="nav__dropdown">
+          <button class="nav__link nav__dropdown-toggle" type="button" aria-expanded="false" aria-controls="nav-producto">
+            Producto <span aria-hidden="true">▾</span>
+          </button>
+          <ul class="nav__submenu" id="nav-producto">
+            <li><a href="#funciones" class="nav__link">Funciones</a></li>
+            <li><a href="#taller" class="nav__link">Servicio Técnico</a></li>
+            <li><a href="#empezar" class="nav__link">Cómo empezar</a></li>
+          </ul>
+        </li>
+        <li class="nav__dropdown">
+          <button class="nav__link nav__dropdown-toggle" type="button" aria-expanded="false" aria-controls="nav-soluciones">
+            Soluciones <span aria-hidden="true">▾</span>
+          </button>
+          <ul class="nav__submenu" id="nav-soluciones">
+            <li><a href="#comercios" class="nav__link">Comercios</a></li>
+            <li><a href="#problema" class="nav__link">Problema / Solución</a></li>
+          </ul>
+        </li>
+        <li><a href="#precios" class="nav__link">Precios</a></li>
+        <li><a href="#faq" class="nav__link">FAQ</a></li>
+      </ul>
+      <a href="#contacto" class="btn btn--primary navbar__cta">Contacto</a>
+    </nav>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============================================================
+     2. HERO
+============================================================ -->
+<section class="hero" id="hero">
+  <div class="hero__bg" aria-hidden="true"></div>
+  <div class="container hero__inner">
+
+    <div class="hero__content">
+      <span class="eyebrow reveal">Hecho en Catamarca · Para comercios argentinos</span>
+
+      <h1 class="hero__title reveal">
+        El sistema de gestión que tu comercio necesitaba.
+        <span class="text-gradient"> Y que podés pagar.</span>
+      </h1>
+
+      <p class="hero__subtitle reveal">
+        StockAR ordena tu stock, tus ventas, tu caja y hasta tu taller.
+        Funciona sin internet con instalación local, y el soporte es en español, de verdad.
+      </p>
+
+      <div class="hero__actions reveal">
+        <a href="#contacto" class="btn btn--primary btn--lg">Pedir una demo</a>
+        <a href="#funciones" class="btn btn--ghost btn--lg">Ver funciones</a>
+      </div>
+
+      <ul class="hero__badges reveal">
+        <li class="badge badge--green">
+          <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1 15l-5-5 1.4-1.4L11 14.2l6.6-6.6L19 9l-8 8z"/></svg>
+          Funciona sin internet
+        </li>
+        <li class="badge badge--blue">
+          <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1 15l-5-5 1.4-1.4L11 14.2l6.6-6.6L19 9l-8 8z"/></svg>
+          Instalación local
+        </li>
+        <li class="badge badge--violet">
+          <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1 15l-5-5 1.4-1.4L11 14.2l6.6-6.6L19 9l-8 8z"/></svg>
+          Soporte en español
+        </li>
+      </ul>
+    </div>
+
+    <!-- Mockup SVG del dashboard -->
+    <div class="hero__mockup reveal" id="heroMockup" aria-hidden="true">
+      <svg viewBox="0 0 640 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Vista del panel de StockAR">
+        <defs>
+          <linearGradient id="g-win" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#0f172a"/>
+            <stop offset="1" stop-color="#0b1120"/>
+          </linearGradient>
+          <linearGradient id="g-bar" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#2563eb"/>
+            <stop offset="1" stop-color="#8b5cf6"/>
+          </linearGradient>
+        </defs>
+        <!-- Ventana -->
+        <rect x="20" y="20" width="600" height="380" rx="14" fill="url(#g-win)" stroke="#1e293b"/>
+        <!-- Barra superior -->
+        <rect x="20" y="20" width="600" height="40" rx="14" fill="#0f172a"/>
+        <rect x="20" y="46" width="600" height="14" fill="#0f172a"/>
+        <circle cx="44" cy="40" r="5" fill="#ef4444"/>
+        <circle cx="62" cy="40" r="5" fill="#f59e0b"/>
+        <circle cx="80" cy="40" r="5" fill="#10b981"/>
+        <text x="110" y="45" fill="#94a3b8" font-family="Inter, sans-serif" font-size="12">StockAR · Panel principal</text>
+
+        <!-- Sidebar -->
+        <rect x="20" y="60" width="140" height="340" fill="#0b1120"/>
+        <rect x="32" y="80" width="116" height="26" rx="6" fill="#1e293b"/>
+        <text x="44" y="97" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="11">📊 Dashboard</text>
+        <text x="44" y="131" fill="#94a3b8" font-family="Inter, sans-serif" font-size="11">🧾 Punto de venta</text>
+        <text x="44" y="159" fill="#94a3b8" font-family="Inter, sans-serif" font-size="11">📦 Stock</text>
+        <text x="44" y="187" fill="#94a3b8" font-family="Inter, sans-serif" font-size="11">💰 Caja</text>
+        <text x="44" y="215" fill="#8b5cf6" font-family="Inter, sans-serif" font-size="11">🔧 Servicio técnico</text>
+        <text x="44" y="243" fill="#94a3b8" font-family="Inter, sans-serif" font-size="11">📈 Reportes</text>
+        <text x="44" y="271" fill="#94a3b8" font-family="Inter, sans-serif" font-size="11">👥 Usuarios</text>
+
+        <!-- KPI cards -->
+        <g>
+          <rect x="180" y="80" width="130" height="70" rx="10" fill="#0f172a" stroke="#1e293b"/>
+          <text x="196" y="102" fill="#94a3b8" font-family="Inter, sans-serif" font-size="10">Ventas hoy</text>
+          <text x="196" y="130" fill="#e2e8f0" font-family="Space Grotesk, sans-serif" font-size="20" font-weight="700">$ —</text>
+        </g>
+        <g>
+          <rect x="320" y="80" width="130" height="70" rx="10" fill="#0f172a" stroke="#1e293b"/>
+          <text x="336" y="102" fill="#94a3b8" font-family="Inter, sans-serif" font-size="10">Productos</text>
+          <text x="336" y="130" fill="#e2e8f0" font-family="Space Grotesk, sans-serif" font-size="20" font-weight="700">—</text>
+        </g>
+        <g>
+          <rect x="460" y="80" width="140" height="70" rx="10" fill="#0f172a" stroke="#1e293b"/>
+          <text x="476" y="102" fill="#94a3b8" font-family="Inter, sans-serif" font-size="10">Taller abiertos</text>
+          <text x="476" y="130" fill="#8b5cf6" font-family="Space Grotesk, sans-serif" font-size="20" font-weight="700">—</text>
+        </g>
+
+        <!-- Gráfico -->
+        <rect x="180" y="165" width="420" height="140" rx="10" fill="#0f172a" stroke="#1e293b"/>
+        <text x="196" y="188" fill="#94a3b8" font-family="Inter, sans-serif" font-size="10">Ventas últimos 7 días</text>
+        <g transform="translate(196,200)">
+          <rect x="0"   y="60" width="30" height="60" rx="4" fill="url(#g-bar)" opacity="0.5"/>
+          <rect x="46"  y="40" width="30" height="80" rx="4" fill="url(#g-bar)" opacity="0.6"/>
+          <rect x="92"  y="50" width="30" height="70" rx="4" fill="url(#g-bar)" opacity="0.7"/>
+          <rect x="138" y="25" width="30" height="95" rx="4" fill="url(#g-bar)" opacity="0.8"/>
+          <rect x="184" y="35" width="30" height="85" rx="4" fill="url(#g-bar)" opacity="0.9"/>
+          <rect x="230" y="15" width="30" height="105" rx="4" fill="url(#g-bar)"/>
+          <rect x="276" y="30" width="30" height="90" rx="4" fill="url(#g-bar)" opacity="0.9"/>
+        </g>
+
+        <!-- Tabla -->
+        <rect x="180" y="320" width="420" height="70" rx="10" fill="#0f172a" stroke="#1e293b"/>
+        <text x="196" y="342" fill="#94a3b8" font-family="Inter, sans-serif" font-size="10">Últimos movimientos</text>
+        <rect x="196" y="352" width="180" height="8" rx="4" fill="#1e293b"/>
+        <rect x="196" y="368" width="240" height="8" rx="4" fill="#1e293b"/>
+        <rect x="450" y="352" width="130" height="8" rx="4" fill="#10b981" opacity="0.6"/>
+        <rect x="450" y="368" width="90"  height="8" rx="4" fill="#2563eb" opacity="0.6"/>
+      </svg>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     3. TIPOS DE COMERCIO (marquee)
+============================================================ -->
+<section class="commerces" id="comercios">
+  <div class="container">
+    <h2 class="section__title reveal">StockAR se adapta a todo tipo de comercio</h2>
+    <p class="section__subtitle reveal">
+      No importa si vendés productos, reparás equipos o atendés mostrador:
+      el sistema se acomoda a cómo trabajás vos.
+    </p>
+  </div>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <ul class="marquee__group">
+        <li><span>🏪</span> Kioscos</li>
+        <li><span>🔧</span> Ferreterías</li>
+        <li><span>📱</span> Talleres de celulares</li>
+        <li><span>🛒</span> Minimercados</li>
+        <li><span>📦</span> Almacenes</li>
+        <li><span>💊</span> Farmacias</li>
+        <li><span>👟</span> Casas de deportes</li>
+        <li><span>🔌</span> Electricistas</li>
+      </ul>
+      <ul class="marquee__group">
+        <li><span>💈</span> Peluquerías y barberías</li>
+        <li><span>🥗</span> Dietéticas</li>
+        <li><span>📚</span> Librerías</li>
+        <li><span>🚚</span> Distribuidoras</li>
+        <li><span>🥖</span> Rotiserías y panaderías</li>
+        <li><span>🐾</span> Veterinarias</li>
+      </ul>
+    </div>
+    <!-- Duplicado para loop continuo -->
+    <div class="marquee__track" aria-hidden="true">
+      <ul class="marquee__group">
+        <li><span>🏪</span> Kioscos</li>
+        <li><span>🔧</span> Ferreterías</li>
+        <li><span>📱</span> Talleres de celulares</li>
+        <li><span>🛒</span> Minimercados</li>
+        <li><span>📦</span> Almacenes</li>
+        <li><span>💊</span> Farmacias</li>
+        <li><span>👟</span> Casas de deportes</li>
+        <li><span>🔌</span> Electricistas</li>
+      </ul>
+      <ul class="marquee__group">
+        <li><span>💈</span> Peluquerías y barberías</li>
+        <li><span>🥗</span> Dietéticas</li>
+        <li><span>📚</span> Librerías</li>
+        <li><span>🚚</span> Distribuidoras</li>
+        <li><span>🥖</span> Rotiserías y panaderías</li>
+        <li><span>🐾</span> Veterinarias</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     4. EL PROBLEMA / LA SOLUCIÓN
+============================================================ -->
+<section class="problem" id="problema">
+  <div class="container">
+    <h2 class="section__title reveal">El problema <span class="muted">/</span> La solución</h2>
+    <p class="section__subtitle reveal">
+      Si hoy anotás todo en un cuaderno, en Excel o en la cabeza, esto te va a sonar.
+    </p>
+
+    <div class="problem__grid">
+
+      <div class="card card--problem reveal">
+        <h3 class="card__title">
+          <span class="card__icon card__icon--warn" aria-hidden="true">⚠</span>
+          Sin StockAR
+        </h3>
+        <ul class="list list--problem">
+          <li>No sabés cuánto stock real tenés hasta que contás a mano.</li>
+          <li>Las ventas del día quedan en un papel que después no cuadra.</li>
+          <li>Si trabajás con taller, el cliente llama para preguntar cómo va su equipo.</li>
+          <li>Los precios y las listas se actualizan a mano, uno por uno.</li>
+          <li>Si se corta internet, no podés vender ni consultar nada.</li>
+        </ul>
+      </div>
+
+      <div class="card card--solution reveal">
+        <h3 class="card__title">
+          <span class="card__icon card__icon--ok" aria-hidden="true">✓</span>
+          Con StockAR
+        </h3>
+        <ul class="list list--solution">
+          <li>Stock actualizado en el momento, con alertas de mínimos.</li>
+          <li>Cada venta queda registrada y la caja cierra sola.</li>
+          <li>El cliente mira el estado de su equipo por un link, sin llamarte.</li>
+          <li>Precios, listas y categorías centralizados y editables.</li>
+          <li>Funciona local: si se corta internet, seguís operando.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     5. FUNCIONES
+============================================================ -->
+<section class="features" id="funciones">
+  <div class="container">
+    <h2 class="section__title reveal">Todo lo que hace StockAR</h2>
+    <p class="section__subtitle reveal">
+      Un solo sistema para el día a día del comercio, sin módulos sueltos que no se hablan entre sí.
+    </p>
+
+    <div class="features__grid">
+
+      <article class="feature reveal">
+        <div class="feature__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="26" height="26"><path fill="currentColor" d="M3 6h18v12H3V6zm2 2v8h14V8H5zm2 2h4v2H7v-2zm0 4h6v2H7v-2z"/></svg>
+        </div>
+        <h3 class="feature__title">Punto de venta</h3>
+        <p class="feature__text">Cobrá rápido, con o sin lector. Ticket, medios de pago y descuentos.</p>
+      </article>
+
+      <article class="feature reveal">
+        <div class="feature__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="26" height="26"><path fill="currentColor" d="M12 2l9 4v6c0 5-3.8 9.2-9 10-5.2-.8-9-5-9-10V6l9-4zm0 2.2L5 7v5c0 3.9 2.9 7.2 7 8 4.1-.8 7-4.1 7-8V7l-7-2.8z"/></svg>
+        </div>
+        <h3 class="feature__title">Control de stock</h3>
+        <p class="feature__text">Altas, bajas, ajustes y alertas de mínimos. Sabés qué tenés y qué falta.</p>
+      </article>
+
+      <article class="feature reveal">
+        <div class="feature__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="26" height="26"><path fill="currentColor" d="M4 4h16v4H4V4zm0 6h16v10H4V10zm2 2v6h4v-6H6zm6 0v2h6v-2h-6zm0 4v2h6v-2h-6z"/></svg>
+        </div>
+        <h3 class="feature__title">Caja diaria</h3>
+        <p class="feature__text">Apertura, cierre y arqueo. Ves la diferencia sin hacer cuentas a mano.</p>
+      </article>
+
+      <article class="feature feature--highlight reveal">
+        <div class="feature__icon feature__icon--violet" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="26" height="26"><path fill="currentColor" d="M22 6l-3-3-4 4-1-1-6 6 4 4 6-6-1-1 4-4-1-1zM2 20l4-2 6-6-4-4-6 6-2 4z"/></svg>
+        </div>
+        <span class="feature__tag">Destacado</span>
+        <h3 class="feature__title">Servicio Técnico</h3>
+        <p class="feature__text">Órdenes con código único y link público para que el cliente siga el estado.</p>
+      </article>
+
+      <article class="feature reveal">
+        <div class="feature__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="26" height="26"><path fill="currentColor" d="M4 20V10h4v10H4zm6 0V4h4v16h-4zm6 0v-7h4v7h-4z"/></svg>
+        </div>
+        <h3 class="feature__title">Reportes y estadísticas</h3>
+        <p class="feature__text">Ventas por período, productos más movidos, ranking y evolución.</p>
+      </article>
+
+      <article class="feature reveal">
+        <div class="feature__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="26" height="26"><path fill="currentColor" d="M12 12a5 5 0 100-10 5 5 0 000 10zm0 2c-4 0-8 2-8 5v3h16v-3c0-3-4-5-8-5z"/></svg>
+        </div>
+        <h3 class="feature__title">Multi-usuario y permisos</h3>
+        <p class="feature__text">Cada empleado con su usuario y permisos según su rol. Todo queda auditado.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     6. SERVICIO TÉCNICO (destacado)
+============================================================ -->
+<section class="workshop" id="taller">
+  <div class="container workshop__inner">
+
+    <div class="workshop__content reveal">
+      <span class="eyebrow eyebrow--violet">Módulo integrado</span>
+      <h2 class="section__title section__title--left">
+        Servicio técnico, <span class="text-violet">sin planillas sueltas</span>
+      </h2>
+      <p class="section__subtitle section__subtitle--left">
+        Si además de vender reparás equipos, StockAR trae el taller adentro.
+        Cada orden tiene su código único y su link de seguimiento público.
+      </p>
+
+      <ul class="checks">
+        <li><span class="check" aria-hidden="true">✓</span> Órdenes con código único e historial del equipo.</li>
+        <li><span class="check" aria-hidden="true">✓</span> Link público: el cliente ve el estado sin llamarte.</li>
+        <li><span class="check" aria-hidden="true">✓</span> Estados personalizables: recibido, en revisión, esperando repuesto, listo, entregado.</li>
+        <li><span class="check" aria-hidden="true">✓</span> Repuestos y mano de obra cargados en la misma orden.</li>
+      </ul>
+
+      <p class="workshop__note">
+        El link lo podés compartir por WhatsApp manualmente o pegarlo donde quieras.
+        No prometemos envíos automáticos: el control lo tenés vos.
+      </p>
+    </div>
+
+    <!-- Mockup del ticket -->
+    <div class="ticket reveal" aria-hidden="true">
+      <div class="ticket__header">
+        <span class="ticket__brand">StockAR · Taller</span>
+        <span class="ticket__code">#ORD-0001</span>
+      </div>
+      <div class="ticket__body">
+        <div class="ticket__row"><span>Cliente</span><strong>—</strong></div>
+        <div class="ticket__row"><span>Equipo</span><strong>—</strong></div>
+        <div class="ticket__row"><span>Falla</span><strong>—</strong></div>
+        <div class="ticket__row"><span>Recibido</span><strong>— / — / —</strong></div>
+      </div>
+      <div class="ticket__status">
+        <span class="status-pill">En revisión</span>
+        <span class="status-link">stockar.app/s/—</span>
+      </div>
+      <div class="ticket__footer">
+        Seguimiento público · Sin llamados
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     7. CÓMO EMPEZÁS
+============================================================ -->
+<section class="steps" id="empezar">
+  <div class="container">
+    <h2 class="section__title reveal">Cómo empezás a usar StockAR</h2>
+    <p class="section__subtitle reveal">
+      Sin apuro. Primero lo probás con tus datos, después decidís.
+    </p>
+
+    <ol class="steps__grid">
+      <li class="step reveal">
+        <span class="step__num">01</span>
+        <h3 class="step__title">Nos contactás</h3>
+        <p class="step__text">Nos escribís por WhatsApp y nos contás qué tipo de comercio tenés y qué necesitás.</p>
+      </li>
+      <li class="step reveal">
+        <span class="step__num">02</span>
+        <h3 class="step__title">Demo de 3 días</h3>
+        <p class="step__text">Te dejamos StockAR funcionando con datos de ejemplo para que lo pruebes sin compromiso.</p>
+      </li>
+      <li class="step reveal">
+        <span class="step__num">03</span>
+        <h3 class="step__title">Instalamos y migramos</h3>
+        <p class="step__text">Coordinamos la instalación local en tu comercio. Si hay datos para migrar, se presupuesta aparte.</p>
+      </li>
+      <li class="step reveal">
+        <span class="step__num">04</span>
+        <h3 class="step__title">Capacitamos</h3>
+        <p class="step__text">Formación presencial o remota para vos y tu equipo. La incluimos con la puesta en marcha.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============================================================
+     8. PRECIOS
+============================================================ -->
+<section class="pricing" id="precios">
+  <div class="container">
+    <h2 class="section__title reveal">Planes</h2>
+    <p class="section__subtitle reveal">
+      Los precios finales se ajustan según tamaño, cantidad de puestos y módulos.
+      Escribinos y te pasamos un presupuesto a medida.
+    </p>
+
+    <div class="pricing__grid">
+
+      <article class="plan reveal">
+        <h3 class="plan__name">Básico</h3>
+        <p class="plan__desc">Para comercios chicos que arrancan a ordenarse.</p>
+        <p class="plan__price"><span class="plan__amount">PRECIO_A_DEFINIR</span></p>
+        <ul class="plan__features">
+          <li>1 puesto de trabajo</li>
+          <li>Punto de venta + stock</li>
+          <li>Caja diaria</li>
+          <li>Reportes básicos</li>
+        </ul>
+        <a href="#contacto" class="btn btn--ghost btn--block">Consultar precio</a>
+      </article>
+
+      <article class="plan plan--featured reveal">
+        <span class="plan__badge">Recomendado</span>
+        <h3 class="plan__name">Estándar</h3>
+        <p class="plan__desc">El más elegido por comercios con varios usuarios.</p>
+        <p class="plan__price"><span class="plan__amount">PRECIO_A_DEFINIR</span></p>
+        <ul class="plan__features">
+          <li>Hasta 3 puestos</li>
+          <li>Todo lo del Básico</li>
+          <li>Multi-usuario y permisos</li>
+          <li>Servicio Técnico integrado</li>
+        </ul>
+        <a href="#contacto" class="btn btn--primary btn--block">Consultar precio</a>
+      </article>
+
+      <article class="plan reveal">
+        <h3 class="plan__name">Avanzado</h3>
+        <p class="plan__desc">Para comercios que necesitan control total.</p>
+        <p class="plan__price"><span class="plan__amount">PRECIO_A_DEFINIR</span></p>
+        <ul class="plan__features">
+          <li>Puestos ilimitados</li>
+          <li>Todo lo del Estándar</li>
+          <li>Reportes avanzados</li>
+          <li>Ajustes a medida</li>
+        </ul>
+        <a href="#contacto" class="btn btn--ghost btn--block">Consultar precio</a>
+      </article>
+
+    </div>
+
+    <div class="pricing__onboarding reveal">
+      <div>
+        <h4>Onboarding y migración</h4>
+        <p>
+          Instalación local, puesta en marcha y capacitación inicial incluidas.
+          Si necesitás migrar datos de otro sistema, se presupuesta aparte según el caso.
+        </p>
+      </div>
+      <div class="pricing__onboarding-price">
+        <span>PRECIO_A_DEFINIR</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     9. FAQ
+============================================================ -->
+<section class="faq" id="faq">
+  <div class="container container--narrow">
+    <h2 class="section__title reveal">Preguntas frecuentes</h2>
+    <p class="section__subtitle reveal">Lo que nos preguntan antes de arrancar.</p>
+
+    <div class="faq__list reveal">
+
+      <details class="faq__item">
+        <summary class="faq__q">¿Qué necesito para instalarlo?</summary>
+        <div class="faq__a">
+          <p>Una computadora con Windows para el puesto principal y la red local del comercio.
+             Coordinamos la instalación con vos y dejamos todo funcionando.</p>
+        </div>
+      </details>
+
+      <details class="faq__item">
+        <summary class="faq__q">¿Funciona sin internet?</summary>
+        <div class="faq__a">
+          <p>Sí. StockAR se instala local en tu comercio, así que podés seguir vendiendo y consultando
+             el stock aunque se corte internet. Cuando vuelve la conexión, todo queda sincronizado.</p>
+        </div>
+      </details>
+
+      <details class="faq__item">
+        <summary class="faq__q">¿Mis datos quedan en la nube o en mi local?</summary>
+        <div class="faq__a">
+          <p>Quedan en tu instalación local. Vos controlás los datos y las copias de respaldo.
+             No los usamos para nada más que para que el sistema funcione.</p>
+        </div>
+      </details>
+
+      <details class="faq__item">
+        <summary class="faq__q">¿Puedo cambiar de plan después?</summary>
+        <div class="faq__a">
+          <p>Sí. Si arrancás con un plan y necesitás más puestos o el módulo de taller,
+             lo sumamos cuando lo necesites. Se ajusta la diferencia.</p>
+        </div>
+      </details>
+
+      <details class="faq__item">
+        <summary class="faq__q">¿Qué incluye el soporte?</summary>
+        <div class="faq__a">
+          <p>Soporte en español por WhatsApp y correo. Atendemos consultas de uso,
+             dudas sobre configuración y problemas del sistema. El horario de atención
+             se coordina con vos al momento de la instalación.</p>
+        </div>
+      </details>
+
+      <details class="faq__item">
+        <summary class="faq__q">¿Puedo probarlo antes de pagar?</summary>
+        <div class="faq__a">
+          <p>Sí. Te damos una demo de 3 días funcionando con datos de ejemplo
+             para que veas cómo se adapta a tu comercio. Sin compromiso.</p>
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     10. CTA FINAL
+============================================================ -->
+<section class="cta" id="contacto">
+  <div class="container cta__inner reveal">
+    <h2 class="cta__title">¿Lo probamos con tus datos?</h2>
+    <p class="cta__text">
+      Escribinos y coordinamos una demo de 3 días. Si te sirve, avanzamos.
+      Si no, no pasa nada.
+    </p>
+
+    <div class="cta__actions">
+      <!-- WHATSAPP_A_DEFINIR: reemplazar número si cambia -->
+      <a class="btn btn--primary btn--lg" href="https://wa.me/543834053731" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M20 3.9A10 10 0 004 18.7L3 22l3.4-1A10 10 0 1020 3.9zM12 20a8 8 0 01-4.1-1.1l-.3-.2-2 .6.5-2-.2-.3A8 8 0 1112 20zm4.5-6c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.5 6.5 0 01-3.2-2.8c-.2-.4.2-.4.6-1.2.1-.2 0-.4 0-.5L9.7 8.7c-.2-.5-.5-.5-.6-.5h-.5a1 1 0 00-.7.3c-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.7 2.7 4.2 3.7 2 .8 2.5.6 2.9.6.5 0 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2 0-.1-.2-.2-.4-.3z"/></svg>
+        WhatsApp: +54 383 405-3731
+      </a>
+      <!-- EMAIL_A_DEFINIR -->
+      <a class="btn btn--ghost btn--lg" href="mailto:EMAIL_A_DEFINIR">
+        Escribirnos por email
+      </a>
+    </div>
+
+    <p class="cta__meta">
+      Catamarca, San Fernando del Valle de Catamarca · Argentina
+    </p>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================
+     11. FOOTER
+============================================================ -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <span class="logo__mark">M·Code<span class="logo__dot">.</span>Systems</span>
+      <span class="footer__product">StockAR</span>
+      <p class="footer__desc">
+        Sistema de gestión para comercios. Hecho en Catamarca, Argentina.
+      </p>
+    </div>
+
+    <div class="footer__cols">
+      <div class="footer__col">
+        <h4>Producto</h4>
+        <ul>
+          <li><a href="#funciones">Funciones</a></li>
+          <li><a href="#taller">Servicio Técnico</a></li>
+          <li><a href="#precios">Precios</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="https://wa.me/543834053731" target="_blank" rel="noopener">WhatsApp: +54 383 405-3731</a></li>
+          <li><a href="mailto:EMAIL_A_DEFINIR">EMAIL_A_DEFINIR</a></li>
+          <li>UBICACION: Catamarca, Argentina</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <div class="container footer__bottom-inner">
+      <span>© <span id="year"></span> M-Code Systems · StockAR</span>
+      <span>Todos los derechos reservados.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
